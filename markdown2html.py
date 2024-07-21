@@ -18,6 +18,8 @@ def markdown2html():
         if not Path(sys.argv[i]).is_file():
             print("Missing {}".format(sys.argv[i]), file=sys.stderr)
             sys.exit(1)
+        else:
+            sys.exit(0)
 
 
 __name__ == "__main__" and markdown2html()
