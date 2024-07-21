@@ -31,9 +31,6 @@ def markdown2html():
                     line_content = line[level:].strip()
                     htmlfile.write(f"<h{level}>{line_content}</h{level}>\n")
 
-                # if (line.startswith("- ")):
-                #     line_content = line[2:].strip()
-                #     htmlfile.write(f"<ul>\n<li>{line_content}</li>\n</ul>\n")
     except Exception:
         sys.exit(1)
 
