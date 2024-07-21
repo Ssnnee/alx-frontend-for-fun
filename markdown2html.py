@@ -19,7 +19,5 @@ def markdown2html():
             print("Missing {}".format(sys.argv[i]), file=sys.stderr)
             sys.exit(1)
 
-    sys.exit(0)
-
 
 __name__ == "__main__" and markdown2html()
