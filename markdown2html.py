@@ -29,10 +29,11 @@ def markdown2html():
             level = parsed_line[0].count("#")
             line_content = line[level:-1].strip()
             with open(sys.argv[2], mode="w", encoding="utf-8") as file:
-                arr_to_write.append("<h{}>{}<h{}>\n".format(
+                arr_to_write.append("<h{}>{}</h{}>\n".format(
                     level, line_content, level))
-
                 file.write("".join(arr_to_write))
+
+    sys.exit(0)
 
 
 __name__ == "__main__" and markdown2html()
