@@ -23,6 +23,8 @@ def markdown2html():
             lines = mdfile.readlines()
 
         with open(sys.argv[2], 'w', encoding='utf-8') as htmlfile:
+            is_ul = False
+
             for line in lines:
                 if line.startswith("#"):
                     level = 0
@@ -30,6 +32,17 @@ def markdown2html():
                         level += 1
                     line_content = line[level:].strip()
                     htmlfile.write(f"<h{level}>{line_content}</h{level}>\n")
+
+                elif not is_ul:
+                    htmlfile.write("<ul>\n")
+                    is_ul = True
+
+                if line.startswith("- "):
+                    line_content = line[2:].strip()
+                    htmlfile.write(f"<li>{line_content}</li>\n")
+
+            if is_ul:
+                htmlfile.write("</ul>\n")
 
     except Exception:
         sys.exit(1)
