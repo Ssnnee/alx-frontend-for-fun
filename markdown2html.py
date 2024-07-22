@@ -24,9 +24,14 @@ def markdown2html():
 
         with open(sys.argv[2], 'w', encoding='utf-8') as htmlfile:
             is_ul = False
+            ul_opened = False
 
             for line in lines:
                 if line.startswith("#"):
+                    if (ul_opened):
+                        htmlfile.write("</ul>\n")
+                        ul_opened = False
+                        is_ul = False
                     level = 0
                     while line[level] == '#':
                         level += 1
@@ -36,6 +41,7 @@ def markdown2html():
                 elif not is_ul:
                     htmlfile.write("<ul>\n")
                     is_ul = True
+                    ul_opened = True
 
                 if line.startswith("- "):
                     line_content = line[2:].strip()
@@ -43,6 +49,7 @@ def markdown2html():
 
             if is_ul:
                 htmlfile.write("</ul>\n")
+                ul_opened = False
 
     except Exception:
         sys.exit(1)
