@@ -651,31 +651,6 @@ ul.row {
     4. CARD
 */
 
-/*** FORM ***/
-/* Comment section
-    ============================= */
-
-.post-comments {
-  width: 80%;
-  margin: 10rem 0 0 auto;
-  padding-left: 7rem;
-}
-
-.post-comments .section-title {
-  font-variant: small-caps;
-}
-
-/* Basic form
-    ============================= */
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  margin: 0;
-}
-
-
 
 /*** 1. GLOBAL ***/
 
@@ -1315,4 +1290,28 @@ ul.row {
 
 .tag-list li:last-child::after {
   content: "";
+}
+
+/*** FORM ***/
+/* Comment section
+    ============================= */
+
+.post-comments {
+  width: 80%;
+  margin: 10rem 0 0 auto;
+  padding-left: 7rem;
+}
+
+.post-comments .section-title {
+  font-variant: small-caps;
+}
+
+/* Basic form
+    ============================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin: 0;
 }

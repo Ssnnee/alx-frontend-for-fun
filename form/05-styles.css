@@ -651,119 +651,6 @@ ul.row {
     4. CARD
 */
 
-/*** FORM ***/
-/* Comment section
-    ============================= */
-
-.post-comments {
-  width: 80%;
-  margin: 10rem 0 0 auto;
-  padding-left: 7rem;
-}
-
-.post-comments .section-title {
-  font-variant: small-caps;
-}
-
-/* Basic form
-    ============================= */
-
-form {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  margin: 0;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  border: none;
-  padding: 0 0 2rem;
-}
-
-label {
-  cursor: pointer;
-  display: block;
-  white-space: nowrap;
-  font-size: 1.4rem;
-  padding: 0 0 .5rem;
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  position: relative;
-  width: 100%;
-  padding: 1.2rem;
-  line-height: 1;
-  border: .1rem solid var(--color-black);
-  background-color: var(--color-white);
-  box-shadow: none;
-  outline: 0;
-}
-
-input[type="text"],
-input[type="email"] {
-  padding-right: 3rem;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  border: .1rem solid var(--color-grey);
-  background-color: var(--color-light-grey);
-}
-
-::placeholder {
-  font-style: italic;
-  font-size: var(--font-size-small);
-}
-
-/* Form group
-============================= */
-
-.form-group {
-  padding: 1rem;
-  margin: 0;
-  background-color: var(--color-white);
-}
-
-form-group:focus-within {
-  background-color: var(--color-light-grey);
-  transition: .3s;
-}
-
-/* Form field
-============================= */
-
-.form-field-container {
-  position: relative;
-}
-
-.form-field-icon {
-  font-style: normal;
-}
-
-/* Form help
-============================= */
-
-.form-group .form-help {
-  margin: 0;
-  line-height: 1.3;
-  letter-spacing: .019rem;
-  color: var(--color-dark-grey);
-  font-size: var(--font-size-small);
-  max-height: 0;
-  transition: 1s;
-  overflow: hidden;
-}
-
-.form-group:focus-within .form-help {
-  max-height: 20rem;
-  margin: .4rem 0 0;
-}
 
 
 /*** 1. GLOBAL ***/
@@ -1404,4 +1291,119 @@ ul.row {
 
 .tag-list li:last-child::after {
   content: "";
+}
+
+
+/*** FORM ***/
+/* Comment section
+    ============================= */
+
+.post-comments {
+  width: 80%;
+  margin: 10rem 0 0 auto;
+  padding-left: 7rem;
+}
+
+.post-comments .section-title {
+  font-variant: small-caps;
+}
+
+/* Basic form
+    ============================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: none;
+  padding: 0 0 2rem;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  white-space: nowrap;
+  font-size: 1.4rem;
+  padding: 0 0 .5rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  position: relative;
+  width: 100%;
+  padding: 1.2rem;
+  line-height: 1;
+  border: .1rem solid var(--color-black);
+  background-color: var(--color-white);
+  box-shadow: none;
+  outline: 0;
+}
+
+input[type="text"],
+input[type="email"] {
+  padding-right: 3rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: .1rem solid var(--color-grey);
+  background-color: var(--color-light-grey);
+}
+
+::placeholder {
+  font-style: italic;
+  font-size: var(--font-size-small);
+}
+
+/* Form group
+============================= */
+
+.form-group {
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--color-white);
+}
+
+form-group:focus-within {
+  background-color: var(--color-light-grey);
+  transition: .3s;
+}
+
+/* Form field
+============================= */
+
+.form-field-container {
+  position: relative;
+}
+
+.form-field-icon {
+  font-style: normal;
+}
+
+/* Form help
+============================= */
+
+.form-group .form-help {
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: .019rem;
+  color: var(--color-dark-grey);
+  font-size: var(--font-size-small);
+  max-height: 0;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.form-group:focus-within .form-help {
+  max-height: 20rem;
+  margin: .4rem 0 0;
 }
